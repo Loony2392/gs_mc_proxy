@@ -1,15 +1,22 @@
-gs_mc_proxy:
-  container_name: gs_mc_proxy
-  image:  itzg/bungeecord:latest
-  enviroment:
-    UID:  1000
-    GID:  1000
-    TYPE: WATERFALL
-    MEMORY: 1024M
-  restart:  unless-stopped
-  ports:
-    - 25565:25577
-  
-  volumes:
-    - /mnt/user/appdata/gs_mc_proxy:/server
+version: "3.8"
+services:
+  proxy:
+    image: itzg/bungeecord
+    ports:
+      - "25565:25577"
+    volumes:
+      - "/mnt/user/appdata/gs_mc_proxy:/server"
+      - "/mnt/user/appdata/gs_mc_proxy:/plugins"
+      - "/mnt/user/appdata/gs_mc_proxy:/config"
 
+    environment:
+      TYPE: WATERFALL
+      WATERFALL_VERSION:  latest
+      WATERFALL_BUILD_ID: latest
+      MEMORY: 512m
+      INIT_MEMORY:  1024m
+      MAX_MEMORY: 2048m
+      NETWORKADDRESS_CACHE_TTL: 60
+      HEALTH_HOST: localhost
+
+    restart: always
