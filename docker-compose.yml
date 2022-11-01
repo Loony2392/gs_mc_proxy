@@ -13,10 +13,13 @@ services:
       NETWORKADDRESS_CACHE_TTL: 60
       HEALTH_HOST: localhost
       REPLACE_ENV_DURING_SYNC:  true
+      MOTD: "LOOYN-ARCADE PTR"
 
     ports:
       - "25565:25577"
     volumes:
-      - "/mnt/user/appdata/gs_mc_proxy:/server"
+      - /mnt/user/appdata/gs_mc_proxy:/server
+      - ./config.yml:/config/config.yml
+      - ./plugins/*:plugins
 
     restart: always
