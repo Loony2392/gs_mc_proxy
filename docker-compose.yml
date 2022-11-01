@@ -19,4 +19,5 @@ services:
       NETWORKADDRESS_CACHE_TTL: 60
       HEALTH_HOST: localhost
 
+
     restart: always
