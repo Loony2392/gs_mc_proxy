@@ -1,4 +1,4 @@
-minecraft-proxy:
+minecraft_proxy:
   container_name: gs_mc_proxy
   image:  itzg/bungeecord:latest
   enviroment:
