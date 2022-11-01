@@ -9,4 +9,4 @@ COPY plugins/*.jar /plugins/
 COPY config.yml /config
 
 # Copy new Waterfall Config to config path
-COPY waterfall.yml /config
+COPY waterfall.yml /server
