@@ -4,4 +4,5 @@ ENV TYPE=WATERFALL
 
 # Copy all Plugins into plugins folder
 COPY plugins .
-COPY configs .
+COPY config.yml .
+COPY waterfall.yml .
