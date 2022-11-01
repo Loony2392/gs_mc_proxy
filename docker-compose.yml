@@ -19,6 +19,5 @@ services:
       - "25565:25577"
     volumes:
       - /mnt/user/appdata/gs_mc_proxy:/server
-      - ./config.yml:/config/config.yml
 
     restart: always
