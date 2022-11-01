@@ -6,7 +6,4 @@ ENV TYPE=WATERFALL
 COPY plugins/*.jar /plugins/
 
 # Copy new Config to config path
-COPY config.yml /config
-
-# Copy new Waterfall Config to config path
-COPY waterfall.yml /server
+COPY /config/* /config
