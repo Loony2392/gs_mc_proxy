@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  mc:
+    image: itzg/bungeecord
+    container_name: gs_mc_homierepublic
+    environment:
+      TYPE: WATERFALL
+      MEMORY: 1024
+      TZ: "Europe/Berlin"
+      WATERFALL_VERSION: "latest"
+      
+    ports:
+      - 25565:25577
+      - 8123:8123
+      - 3306:3306
+    volumes:
+      - /mnt/user/appdata/gs_mc_loony-arcade:/server
+      - /mnt/user/appdata/gs_mc_loony-arcade/plugins:/plugins
+      - /mnt/user/appdata/gs_mc_loony-arcade/:/config
+      
+    restart: unless-stopped
