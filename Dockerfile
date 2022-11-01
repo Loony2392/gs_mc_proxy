@@ -1,8 +1,7 @@
 FROM itzg/itzg/bungeecord
 
-WORKDIR /server
+ENV TYPE=WATERFALL
 
 # Copy all Plugins into plugins folder
-COPY ./plugins/*jar ./server/plugins/
-COPY ./config.yml ./config/
-COPY ./waterfall.yml ./config/
+COPY plugins/*.jar /plugins/
+COPY config.yml /config/
