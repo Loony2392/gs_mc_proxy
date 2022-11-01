@@ -1,0 +1,64 @@
+enforce_secure_profile: true
+listeners:
+- query_port: 25577
+  motd: LOONY - ARCADE
+  tab_list: GLOBAL_PING
+  query_enabled: false
+  proxy_protocol: false
+  forced_hosts:
+    pvp.md-5.net: pvp
+  ping_passthrough: false
+  priorities:
+  - lobby
+  bind_local_address: true
+  host: 0.0.0.0:25565
+  max_players: 50
+  tab_size: 60
+  force_default_server: false
+remote_ping_cache: -1
+network_compression_threshold: 256
+permissions:
+  default:
+  - bungeecord.command.server
+  - bungeecord.command.list
+  admin:
+  - bungeecord.command.alert
+  - bungeecord.command.end
+  - bungeecord.command.ip
+  - bungeecord.command.reload
+  - bungeecord.command.kick
+log_pings: true
+connection_throttle_limit: 6
+server_connect_timeout: 5000
+timeout: 30000
+player_limit: -1
+prevent_proxy_connections: false
+ip_forward: true
+groups:
+  md_5:
+  - admin
+remote_ping_timeout: 5000
+connection_throttle: 4000
+log_commands: false
+stats: ebd0e270-21d2-4961-981a-ee860dc27366
+online_mode: true
+forge_support: true
+disabled_commands:
+- disabledcommandhere
+servers:
+  Lobby:
+    motd: Lobby
+    address: localhost:25575
+    restricted: false
+  Obstkorb:
+    motd: Obstkorb
+    address: localhost:25585
+    restricted: false
+  HomieRepublic:
+    motd: HomieRepublic
+    address: localhost:25595
+    restricted: false
+  PTR:
+    motd: PTR
+    address: localhost:29999
+    restricted: false
