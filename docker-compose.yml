@@ -1,4 +1,3 @@
-version: '3.5'
 minecraft-proxy:
   container_name: gs_mc_proxy
   image:  itzg/bungeecord:latest
