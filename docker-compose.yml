@@ -2,13 +2,7 @@ version: "3.8"
 services:
   proxy:
     image: itzg/bungeecord
-    ports:
-      - "25565:25577"
-    volumes:
-      - "/mnt/user/appdata/gs_mc_proxy:/server"
-      - "/mnt/user/appdata/gs_mc_proxy:/plugins"
-      - "/mnt/user/appdata/gs_mc_proxy:/config"
-
+    
     environment:
       TYPE: WATERFALL
       WATERFALL_VERSION:  latest
@@ -18,6 +12,14 @@ services:
       MAX_MEMORY: 2048m
       NETWORKADDRESS_CACHE_TTL: 60
       HEALTH_HOST: localhost
+      REPLACE_ENV_DURING_SYNC:  true
+
+    ports:
+      - "25565:25577"
+    volumes:
+      - "/mnt/user/appdata/gs_mc_proxy:/server"
+      - "/mnt/user/appdata/gs_mc_proxy:/plugins"
+      - "/mnt/user/appdata/gs_mc_proxy:/config"
 
 
 
