@@ -20,6 +20,6 @@ services:
     volumes:
       - /mnt/user/appdata/gs_mc_proxy:/server
       - ./config.yml:/config/config.yml
-      - ./plugins/*:plugins
+      - ./plugins/:plugins
 
     restart: always
