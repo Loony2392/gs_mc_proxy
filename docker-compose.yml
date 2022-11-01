@@ -6,8 +6,8 @@ services:
       - "25565:25577"
     volumes:
       - "/mnt/user/appdata/gs_mc_proxy:/server"
-      - "/mnt/user/appdata/gs_mc_proxy:/plugins"
-      - "/mnt/user/appdata/gs_mc_proxy:/config"
+      - "/mnt/user/appdata/gs_mc_proxy/plugins:/plugins"
+      - "/mnt/user/appdata/gs_mc_proxy/:/config"
 
     environment:
       TYPE: WATERFALL
