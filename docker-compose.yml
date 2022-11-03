@@ -2,8 +2,9 @@ version: "3.8"
 services:
   proxy:
     image: itzg/bungeecord
-    name: gs_mc_proxy
+    
     environment:
+      NAME: gs_mc_proxy
       TYPE: WATERFALL
       WATERFALL_VERSION:  latest
       WATERFALL_BUILD_ID: latest
