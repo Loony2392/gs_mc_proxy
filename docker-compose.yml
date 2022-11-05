@@ -2,9 +2,11 @@ version: "3.8"
 services:
   proxy:
     image: itzg/bungeecord
-    
+    name: gs_mc_proxy
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
     environment:
-      NAME: gs_mc_proxy
       TYPE: WATERFALL
       WATERFALL_VERSION:  latest
       WATERFALL_BUILD_ID: latest
@@ -20,5 +22,3 @@ services:
       - "25565:25577"
     volumes:
       - /mnt/user/appdata/gs_mc_proxy:/server
-
-    restart: always
