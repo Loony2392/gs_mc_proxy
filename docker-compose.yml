@@ -9,7 +9,6 @@ services:
     environment:
       TYPE: WATERFALL
       WATERFALL_VERSION:  latest
-      WATERFALL_BUILD_ID: latest
       MEMORY: 512m
       INIT_MEMORY:  1024m
       MAX_MEMORY: 2048m
